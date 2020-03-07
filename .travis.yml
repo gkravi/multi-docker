@@ -8,7 +8,7 @@ script:
 after_sucess:
   - docker build -t ravisinceilogin/multi-client ./client
   - docker build -t ravisinceilogin/multi-nginx ./nginx
-  - docker build -t ravisinceilogin/multi-server ./client
+  - docker build -t ravisinceilogin/multi-server ./server
   - docker build -t ravisinceilogin/multi-worker ./worker
   # Log in to the docker CLI
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
